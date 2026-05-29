@@ -280,6 +280,7 @@ int main(int argc, char *argv[])
         qCInfo(lcSensorFw) << "Loading ALSSensor " << sm.loadPlugin("alssensor");
     }
 #endif
+    qCInfo(lcSensorFw) << "Loading chopchopPlugin " << sm.loadPlugin("chopchopsensor");
 
     if (parser.magnetometerCalibration()) {
         CalibrationHandler* calibrationHandler_ = new CalibrationHandler(nullptr);
