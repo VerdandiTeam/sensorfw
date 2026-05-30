@@ -18,6 +18,7 @@ SUBDIRS  = accelerometersensor \
            wakeupsensor \
            temperaturesensor \
            stepcountersensor \
-           chopchopsensor
+           chopchopsensor \
+           cameragesturesensor
 
 contextprovider:SUBDIRS += contextplugin
