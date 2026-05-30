@@ -14,7 +14,9 @@ HYBRIS_SUBDIRS = hybrisaccelerometer \
                  hybrisgeorotationadaptor \
                  hybrisstepcounteradaptor \
                  hybrischopchopadaptor \
-                 hybriscameragestureadaptor
+                 hybriscameragestureadaptor \
+                 hybrismotoglanceadaptor \
+                 hybrisliftgestureadaptor
 
 # split like this as Sailfish only installs hybris plugins
 contains(CONFIG,hybris) {
