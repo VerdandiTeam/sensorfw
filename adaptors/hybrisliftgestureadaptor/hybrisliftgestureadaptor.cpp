@@ -31,7 +31,7 @@ int liftGestureSensorType()
     bool ok = false;
     int sensorType = setting.toInt(&ok);
     if (!ok)
-        sensorType = 65546;
+        sensorType = 65556;
     qCInfo(lcSensorFw) << "liftGestureSensorType:" << sensorType;
     return sensorType;
 }
