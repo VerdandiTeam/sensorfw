@@ -268,6 +268,7 @@ void HybrisBackendBinderAidl::getSensorList()
     gint32 count = 0;
     gbinder_reader_read_int32(&reader, &status);
     gbinder_reader_read_int32(&reader, &count);
+    qDebug() << "Sensors count: " << count;
 
     m_sensorCount = count;
     m_sensorArray = new sensor_t[m_sensorCount];
