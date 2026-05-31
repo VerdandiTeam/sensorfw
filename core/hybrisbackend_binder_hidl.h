@@ -40,6 +40,7 @@ public:
     int setActive(int handle, bool active);
     int setDelay(int handle, int64_t delay_ns);
     void eventReaderThreadImpl();
+    void getSensorList();
 
 protected:
     static GBinderLocalReply *sensorCallbackHandler(
@@ -49,7 +50,6 @@ protected:
         guint flags,
         int* status,
         void* user_data);
-    void getSensorList();
     void startConnect();
     void finishConnect();
     static void binderDied(GBinderRemoteObject *, void *user_data);

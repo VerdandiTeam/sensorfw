@@ -51,6 +51,7 @@ public:
     virtual int setActive(int handle, bool active) = 0;
     virtual int setDelay(int handle, int64_t delay_ns) = 0;
     virtual void eventReaderThreadImpl() = 0;
+    virtual void getSensorList() = 0;
 
 protected:
     GBinderClient         *m_client;

@@ -425,6 +425,7 @@ HybrisManager *HybrisManager::instance()
 
 int HybrisManager::handleForType(int sensorType) const
 {
+    m_backend->getSensorList();
     int index = indexForType(sensorType);
     return (index < 0) ? -1 : m_backend->handle(index);
 }

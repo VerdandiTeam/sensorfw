@@ -264,6 +264,17 @@ void HybrisBackendBinderAidl::getSensorList()
         return;
     }
 
+    if (m_sensorCount > 0) {
+        for (int i = 0 ; i < m_sensorCount ; i++) {
+            g_free((void*)m_sensorArray[i].name.data.str);
+            g_free((void*)m_sensorArray[i].vendor.data.str);
+            g_free((void*)m_sensorArray[i].typeAsString.data.str);
+            g_free((void*)m_sensorArray[i].requiredPermission.data.str);
+        }
+
+        delete[] m_sensorArray;
+    }
+
     gbinder_remote_reply_init_reader(reply, &reader);
     gint32 count = 0;
     gbinder_reader_read_int32(&reader, &status);
